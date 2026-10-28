@@ -1,4 +1,6 @@
-# EduPilot AI — Intelligent Academic Performance & Study Management System
+# edupilot
+
+## EduPilot AI — Intelligent Academic Performance & Study Management System
 
 Full-stack app: **React + Tailwind** frontend, **FastAPI** backend, **PostgreSQL + pgvector** database,
 **scikit-learn** performance prediction, and **Claude**-powered RAG chat over your lecture notes.
