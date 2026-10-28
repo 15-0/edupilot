@@ -1,0 +1,75 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --color-ink: #e6ebff;
+  --color-ink-2: #a9b4d6;
+  --color-ink-3: #7180a8;
+}
+
+html, body, #root { height: 100%; }
+
+body {
+  margin: 0;
+  color: var(--color-ink);
+  background-color: #070d26;
+  background-image:
+    radial-gradient(1200px 600px at 15% -10%, rgba(59, 130, 246, 0.22), transparent 60%),
+    radial-gradient(900px 500px at 100% 10%, rgba(168, 85, 247, 0.16), transparent 60%),
+    radial-gradient(800px 600px at 50% 110%, rgba(34, 211, 238, 0.10), transparent 60%),
+    linear-gradient(160deg, #0a1338 0%, #070d26 55%, #0b1035 100%);
+  background-attachment: fixed;
+  -webkit-font-smoothing: antialiased;
+}
+
+@utility card {
+    @apply rounded-2xl border border-white/10 bg-white/[0.04] p-6 shadow-[0_8px_30px_rgba(0,0,0,0.25)] backdrop-blur-md;
+}
+
+@utility input {
+    @apply w-full rounded-xl border border-white/10 bg-white/[0.06] px-3.5 py-2.5 text-sm text-ink placeholder:text-ink-3 outline-none transition focus:border-cyan-400/60 focus:bg-white/[0.09];
+}
+
+@utility label {
+    @apply mb-1.5 block text-xs font-medium tracking-wide text-ink-2;
+}
+
+@utility btn {
+    @apply inline-flex items-center justify-center gap-2 rounded-xl px-4 py-2.5 text-sm font-semibold transition disabled:cursor-not-allowed disabled:opacity-50;
+}
+
+@utility btn-primary { @apply btn bg-gradient-to-r from-cyan-500 to-blue-600 text-white hover:brightness-110;
+}
+
+@utility btn-pink { @apply btn bg-gradient-to-r from-pink-500 to-rose-600 text-white hover:brightness-110;
+}
+
+@utility btn-purple { @apply btn bg-gradient-to-r from-purple-500 to-fuchsia-600 text-white hover:brightness-110;
+}
+
+@utility btn-green { @apply btn bg-emerald-500 text-white hover:bg-emerald-400;
+}
+
+@utility btn-ghost { @apply btn border border-white/10 bg-white/[0.04] text-ink hover:bg-white/[0.09];
+}
+
+@utility btn-sm { @apply px-3 py-1.5 text-xs;
+}
+
+@utility table-head { @apply px-3 py-2 text-left text-xs font-medium uppercase tracking-wider text-ink-3;
+}
+
+@utility table-cell { @apply border-t border-white/5 px-3 py-2.5 text-sm;
+}
+
+select.input option { background: #0e1740; color: #e6ebff; }
+input[type="date"].input { color-scheme: dark; }
+
+::-webkit-scrollbar { width: 8px; height: 8px; }
+::-webkit-scrollbar-thumb { background: rgba(255, 255, 255, 0.12); border-radius: 8px; }
+
+.markdown p { margin: 0.4rem 0; }
+.markdown ul { list-style: disc; padding-left: 1.2rem; margin: 0.4rem 0; }
+.markdown ol { list-style: decimal; padding-left: 1.2rem; margin: 0.4rem 0; }
+.markdown code { background: rgba(255,255,255,0.08); padding: 0 4px; border-radius: 4px; }
+.markdown strong { color: #fff; }
